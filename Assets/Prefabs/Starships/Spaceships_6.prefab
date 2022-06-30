@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8579164845438443636}
   - component: {fileID: 7381201681077128842}
   - component: {fileID: 6168627338407097382}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4815,7 @@ GameObject:
   - component: {fileID: 8435641831590288811}
   - component: {fileID: 225225275166164685}
   - component: {fileID: 3894295726495752763}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,7 +9619,7 @@ GameObject:
   - component: {fileID: 8911280771888431273}
   - component: {fileID: 3773462567374097103}
   - component: {fileID: 9209137531544519186}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14423,15 +14423,14 @@ GameObject:
   - component: {fileID: 6270328978219140579}
   - component: {fileID: 6965790366877878854}
   - component: {fileID: 5138468805068521100}
-  - component: {fileID: 5313164466415521028}
-  - component: {fileID: 4811275088722868700}
   - component: {fileID: -241005472206281781}
-  - component: {fileID: 1453593761037745787}
   - component: {fileID: -158798566343666285}
-  - component: {fileID: 1566954400829974517}
-  m_Layer: 15
+  - component: {fileID: -34295256221935178}
+  - component: {fileID: -3626843614767262462}
+  - component: {fileID: -2217064629110685698}
+  m_Layer: 11
   m_Name: Spaceships_6
-  m_TagString: Starship
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14503,35 +14502,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5313164466415521028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651674088675172185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f14ee9edf3b09429c6bb12c730576a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4811275088722868700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651674088675172185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a126a3d1f7446f488eba911b1e8817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8026098602462558415, guid: 07dd484abba257b4ba6a1e62a6f2df7a,
-    type: 3}
-  spaceshipPrefab: {fileID: 6651674088675172185}
-  spawnPosZ: 7
-  bulletSpeed: 30
 --- !u!64 &-241005472206281781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14546,20 +14516,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5842399482426291832, guid: ccc732c0c31f1f14699d645f0db5b0f0, type: 3}
---- !u!114 &1453593761037745787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6651674088675172185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6aef11160eee8d47b16cd79bf65c0e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticlePrefab: {fileID: 2009283021873200321, guid: f7aa6cd053015634dbc42478c8d7be27,
-    type: 3}
 --- !u!82 &-158798566343666285
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14569,9 +14525,8 @@ AudioSource:
   m_GameObject: {fileID: 6651674088675172185}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 49b4cc9ee72db8e4c8d54ae5bcc1b64e, type: 3}
+  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 54a5d3710755d044bab37258c1d6c0eb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -14657,7 +14612,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1566954400829974517
+--- !u!114 &-34295256221935178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14666,9 +14621,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 6651674088675172185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e133d28f65ecdca4ebf23389603a99e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d8f99c0dbbc18b40842ce37ed6629b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetPosition: 10
+--- !u!114 &-3626843614767262462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651674088675172185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece4f078ce61e484ea6bf6794210fb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2217064629110685698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651674088675172185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13f74b6048ac564bbf494c337aebe25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 9082322190673653310, guid: 8dce054ebd3cbc64a8b77fcfa1f88b7b, type: 3}
+  bulletSpeed: 30
+  offsetPositionZ: 6.5
 --- !u!1 &7215762256376123253
 GameObject:
   m_ObjectHideFlags: 0
@@ -14680,7 +14663,7 @@ GameObject:
   - component: {fileID: 1054857948290497262}
   - component: {fileID: 7551849065459676989}
   - component: {fileID: 2484505588738191168}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

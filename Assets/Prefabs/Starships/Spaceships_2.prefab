@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7443408260609686912}
   - component: {fileID: 2062089571905641320}
   - component: {fileID: 5319720702811856972}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4815,7 @@ GameObject:
   - component: {fileID: 2897436859145994598}
   - component: {fileID: 2620614366232686358}
   - component: {fileID: 3368014669548977599}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,7 +9619,7 @@ GameObject:
   - component: {fileID: 7583095822621658128}
   - component: {fileID: 3263180207317225793}
   - component: {fileID: 720716154584129178}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14423,15 +14423,14 @@ GameObject:
   - component: {fileID: 5014844754178886167}
   - component: {fileID: 8230210871907796402}
   - component: {fileID: 6184394909383897464}
-  - component: {fileID: 6813964352164832215}
-  - component: {fileID: 778090538188836619}
   - component: {fileID: 3945788399877861027}
-  - component: {fileID: -6631656919079079056}
   - component: {fileID: 5727062779096620630}
-  - component: {fileID: 7075036926470366180}
-  m_Layer: 15
+  - component: {fileID: 6629729736258875481}
+  - component: {fileID: 4998508781958941105}
+  - component: {fileID: 8508926547464075601}
+  m_Layer: 11
   m_Name: Spaceships_2
-  m_TagString: Starship
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14504,35 +14503,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6813964352164832215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5680057378446250157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f14ee9edf3b09429c6bb12c730576a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &778090538188836619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5680057378446250157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a126a3d1f7446f488eba911b1e8817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8026098602462558415, guid: 07dd484abba257b4ba6a1e62a6f2df7a,
-    type: 3}
-  spaceshipPrefab: {fileID: 5680057378446250157}
-  spawnPosZ: 7
-  bulletSpeed: 30
 --- !u!64 &3945788399877861027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14547,20 +14517,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6007931923176382723, guid: 9d4003624d8ff6e4790c5f3df1573ad2, type: 3}
---- !u!114 &-6631656919079079056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5680057378446250157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6aef11160eee8d47b16cd79bf65c0e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticlePrefab: {fileID: 2009283021873200321, guid: f7aa6cd053015634dbc42478c8d7be27,
-    type: 3}
 --- !u!82 &5727062779096620630
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14570,9 +14526,8 @@ AudioSource:
   m_GameObject: {fileID: 5680057378446250157}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 49b4cc9ee72db8e4c8d54ae5bcc1b64e, type: 3}
+  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 54a5d3710755d044bab37258c1d6c0eb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -14658,7 +14613,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7075036926470366180
+--- !u!114 &6629729736258875481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14667,9 +14622,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 5680057378446250157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e133d28f65ecdca4ebf23389603a99e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d8f99c0dbbc18b40842ce37ed6629b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetPosition: 10
+--- !u!114 &4998508781958941105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680057378446250157}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece4f078ce61e484ea6bf6794210fb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8508926547464075601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680057378446250157}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13f74b6048ac564bbf494c337aebe25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 9082322190673653310, guid: 8dce054ebd3cbc64a8b77fcfa1f88b7b, type: 3}
+  bulletSpeed: 30
+  offsetPositionZ: 6.5
 --- !u!1 &7808705739378071934
 GameObject:
   m_ObjectHideFlags: 0
@@ -14681,7 +14664,7 @@ GameObject:
   - component: {fileID: 7388356347230598577}
   - component: {fileID: 4805292403983701561}
   - component: {fileID: 9099747686069894411}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19485,7 +19468,7 @@ GameObject:
   - component: {fileID: 4300914551390837916}
   - component: {fileID: 7434171596500074093}
   - component: {fileID: 2059147328985686503}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

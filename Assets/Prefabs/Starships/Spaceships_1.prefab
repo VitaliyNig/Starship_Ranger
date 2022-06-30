@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 129607266261063276}
   - component: {fileID: 5220835618239183325}
   - component: {fileID: 5220618851765049942}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4815,7 @@ GameObject:
   - component: {fileID: 4423018601454932352}
   - component: {fileID: 2016750836268394497}
   - component: {fileID: 8958029174052616329}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Engine_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,15 +9619,14 @@ GameObject:
   - component: {fileID: 6108938417990593268}
   - component: {fileID: 7163138530462393681}
   - component: {fileID: 4939432581747642779}
-  - component: {fileID: -7414108416422140143}
-  - component: {fileID: 5475279136829447220}
   - component: {fileID: 4319787886056961772}
-  - component: {fileID: -5622947418893537092}
   - component: {fileID: 1874778280959982917}
-  - component: {fileID: 6657740384595810934}
-  m_Layer: 15
+  - component: {fileID: 6439753546277130148}
+  - component: {fileID: 6537337577843081756}
+  - component: {fileID: 2551137736945341660}
+  m_Layer: 11
   m_Name: Spaceships_1
-  m_TagString: Starship
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9697,35 +9696,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-7414108416422140143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885053523598291022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f14ee9edf3b09429c6bb12c730576a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5475279136829447220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885053523598291022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a126a3d1f7446f488eba911b1e8817b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8026098602462558415, guid: 07dd484abba257b4ba6a1e62a6f2df7a,
-    type: 3}
-  spaceshipPrefab: {fileID: 6885053523598291022}
-  spawnPosZ: 7
-  bulletSpeed: 30
 --- !u!64 &4319787886056961772
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9740,20 +9710,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7959959029572208088, guid: aee18d264c9f2774798080cbc8e4fc83, type: 3}
---- !u!114 &-5622947418893537092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885053523598291022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6aef11160eee8d47b16cd79bf65c0e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticlePrefab: {fileID: 2009283021873200321, guid: f7aa6cd053015634dbc42478c8d7be27,
-    type: 3}
 --- !u!82 &1874778280959982917
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9763,9 +9719,8 @@ AudioSource:
   m_GameObject: {fileID: 6885053523598291022}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 49b4cc9ee72db8e4c8d54ae5bcc1b64e, type: 3}
+  OutputAudioMixerGroup: {fileID: -6335425774799471602, guid: 517a65655ff5bff4db56c445452fe798, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 54a5d3710755d044bab37258c1d6c0eb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -9851,7 +9806,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6657740384595810934
+--- !u!114 &6439753546277130148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9860,6 +9815,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 6885053523598291022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e133d28f65ecdca4ebf23389603a99e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d8f99c0dbbc18b40842ce37ed6629b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetPosition: 10
+--- !u!114 &6537337577843081756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885053523598291022}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece4f078ce61e484ea6bf6794210fb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2551137736945341660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6885053523598291022}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13f74b6048ac564bbf494c337aebe25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 9082322190673653310, guid: 8dce054ebd3cbc64a8b77fcfa1f88b7b, type: 3}
+  bulletSpeed: 30
+  offsetPositionZ: 6.5
