@@ -11,9 +11,9 @@ public class AsteroidDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        GameObject thisGO = this.gameObject;
         if (tryCheck == false)
         {
-            GameObject thisGO = this.gameObject;
             string colliderTag = other.collider.tag;
             if (listTags.Contains(colliderTag))
             {
@@ -21,25 +21,22 @@ public class AsteroidDestroy : MonoBehaviour
                 switch (colliderTag)
                 {
                     case "Bullet":
-                        /*
-                        if (thisGO.tag == "Crystal")
+                        if (this.tag == "Crystal")
                         {
-                            
-                            Money money = GameObject.Find("CountMoney").GetComponent<Money>();
-                            money.countMoney++;
+                            Money money = GameObject.Find("EventScripts").GetComponent<Money>();
+                            money.countMoneyGame++;
                             money.UpdateMoney();
-                            
                         }
                         DestroyGO(thisGO);
-                        */
                         break;
                     case "Starship":
-                        /*
-                        if (GameObject.Find("CountHealth").GetComponent<Health>().countHealth > 1)
+                        Health health = GameObject.Find("EventScripts").GetComponent<Health>();
+                        if (health.countHealth > 0)
                         {
-                            DestroyGO(thisGO);
+                            health.countHealth--;
+                            health.UpdateHealth();
                         }
-                        */
+                        DestroyGO(thisGO);
                         break;
                     case "TriggerAsteroid":
                         Destroy(thisGO);
@@ -52,9 +49,10 @@ public class AsteroidDestroy : MonoBehaviour
     private void DestroyGO(GameObject thisGO)
     {
         ParticleSystem explosionParticle = explosionParticlePrefab.GetComponentInChildren<ParticleSystem>();
-        ParticleSystem ps = ParticleSystem.Instantiate(explosionParticle, thisGO.transform.position, Quaternion.identity);
-        ps.Play();
-        ps.GetComponent<AudioSource>().Play();
+        ParticleSystem particleSystem = ParticleSystem.Instantiate(explosionParticle, thisGO.transform.position, Quaternion.identity);
+        particleSystem.Play();
+        particleSystem.GetComponent<AudioSource>().Play();
+        particleSystem.GetComponent<ExplosionForce>().enabled = true;
         Destroy(thisGO);
     }
 }

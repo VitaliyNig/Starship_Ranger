@@ -6,11 +6,17 @@ public class СharacterSpawn : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> starshipPrefab;
-    [SerializeField]
-    private int starshipId;
+    private GameObject starshipGO;
+    public int starshipID;
 
     private void Start()
     {
-        GameObject starshipGO = Instantiate<GameObject>(starshipPrefab[starshipId]);
+        Reload();
+    }
+
+    public void Reload()
+    {
+        Destroy(starshipGO);
+        starshipGO = Instantiate<GameObject>(starshipPrefab[starshipID]);
     }
 }

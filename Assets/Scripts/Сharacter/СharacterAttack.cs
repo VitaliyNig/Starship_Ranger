@@ -14,10 +14,10 @@ public class СharacterAttack : MonoBehaviour
     private void Start()
     {
         float rate = 0.5f;
-        InvokeRepeating("BulletSpawn", rate, rate);
+        InvokeRepeating("BulletCreate", rate, rate);
     }
 
-    private void BulletSpawn()
+    private void BulletCreate()
     {
         GameObject bulletGO = Instantiate<GameObject>(bulletPrefab);
         Vector3 bulletPosition = Vector3.zero;

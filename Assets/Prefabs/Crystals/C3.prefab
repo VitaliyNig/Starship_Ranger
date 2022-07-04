@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 939451783407308702}
   - component: {fileID: 4226137860309680187}
   - component: {fileID: 2108448475972007153}
-  - component: {fileID: 3979193827894704556}
   - component: {fileID: -1979017020953171730}
   - component: {fileID: 7363500827743546513}
-  m_Layer: 12
+  - component: {fileID: 7537065563601200805}
+  m_Layer: 10
   m_Name: C3
   m_TagString: Crystal
   m_Icon: {fileID: 0}
@@ -84,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3979193827894704556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451005135329023268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8ab90a10ebaaf40b087d18f69d14a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticlePrefab: {fileID: 6492278243469704413, guid: 39b82f10b798f7f4ab62b6a218527315,
-    type: 3}
 --- !u!64 &-1979017020953171730
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -128,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &7537065563601200805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451005135329023268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20bb394af9c89c458288689bf67057a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticlePrefab: {fileID: 6492278243469704413, guid: 39b82f10b798f7f4ab62b6a218527315, type: 3}

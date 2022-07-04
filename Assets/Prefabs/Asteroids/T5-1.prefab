@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7860349483602185903}
   - component: {fileID: 6537618764291604746}
   - component: {fileID: 9033867811303683520}
-  - component: {fileID: 6781477218427965901}
   - component: {fileID: 5885539576861494026}
   - component: {fileID: -6821113022767537712}
-  m_Layer: 12
+  - component: {fileID: -1031729481713446044}
+  m_Layer: 10
   m_Name: T5-1
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
@@ -84,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6781477218427965901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7376406464681268245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8ab90a10ebaaf40b087d18f69d14a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionParticlePrefab: {fileID: 6492278243469704413, guid: 39b82f10b798f7f4ab62b6a218527315,
-    type: 3}
 --- !u!64 &5885539576861494026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -128,3 +114,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &-1031729481713446044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376406464681268245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20bb394af9c89c458288689bf67057a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticlePrefab: {fileID: 6492278243469704413, guid: 39b82f10b798f7f4ab62b6a218527315, type: 3}

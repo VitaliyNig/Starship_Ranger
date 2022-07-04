@@ -6,7 +6,10 @@ TagManager:
   tags:
   - TriggerAsteroid
   - TriggerBullet
-  - AsteroidTrigger
+  - Crystal
+  - Bullet
+  - Starship
+  - Asteroid
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - TriggerAsteroid
+  - TriggerBullet
   - Asteroid
   - Starship
   - Bullet

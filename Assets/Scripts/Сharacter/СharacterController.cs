@@ -12,12 +12,12 @@ public class СharacterController : MonoBehaviour
         {
             if (touch.phase == TouchPhase.Moved)
             {
-                Vector3 touchPos2D = Input.mousePosition;
-                touchPos2D.z = -Camera.main.transform.position.z;
-                Vector3 touchPos3D = Camera.main.ScreenToWorldPoint(touchPos2D);
+                Vector3 touchPosition2D = Input.mousePosition;
+                touchPosition2D.z = -Camera.main.transform.position.z;
+                Vector3 touchPosition3D = Camera.main.ScreenToWorldPoint(touchPosition2D);
 
                 Vector3 starshipPosition = this.transform.position;
-                starshipPosition.x = touchPos3D.x;
+                starshipPosition.x = touchPosition3D.x;
                 this.transform.position = Vector3.Lerp(this.transform.position, starshipPosition, 0.5f);
 
                 if (lastPosition.x > this.transform.position.x)
