@@ -48,7 +48,7 @@ public class AsteroidSpawn : MonoBehaviour
         Transform asteroidTransform = asteroidGO.transform;
         asteroidTransform.position = new Vector3(Random.Range(-screenSize.x, screenSize.x), 0f, screenSize.z + Random.Range(3f, 6f));
         asteroidTransform.Rotate(float.Parse(Random.Range(0, 360).ToString()), float.Parse(Random.Range(0, 360).ToString()), float.Parse(Random.Range(0, 360).ToString()), Space.Self);
-        
+
         asteroidGO.GetComponent<Rigidbody>().AddForce(0f, 0f, -asteroidSpeed, ForceMode.Impulse);
     }
 }

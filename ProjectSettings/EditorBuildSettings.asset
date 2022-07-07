@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HangarScene.unity
+    guid: 8bcac5e27223e57468b0f225823668a4
+  - enabled: 1
+    path: Assets/Scenes/DevScene.unity
+    guid: d80a9cb49f7d55f42829129112c1bb64
   m_configObjects: {}

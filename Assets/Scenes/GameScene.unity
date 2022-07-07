@@ -625,7 +625,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 3286163911610860551, guid: 9b61f7b29799b2e4e99c4731e06f4751, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 3286163911610860551, guid: 5315b3f25b5823b4482aff427c8bbaca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -637,9 +637,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1565936294}
-        m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 639088969}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: ContinueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 639088968}
   - component: {fileID: 639088967}
   - component: {fileID: 639088969}
+  - component: {fileID: 639088970}
   m_Layer: 0
   m_Name: EventScripts
   m_TagString: Untagged
@@ -894,6 +895,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScene: {fileID: 1715271722}
+  respawnButton: {fileID: 634068711}
+  respawnMoney: 20
+  respawnCount: 0
+--- !u!114 &639088970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639088961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd5c66516c044d489d314145f33f513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkIntensity: 5
+  blinkDuration: 0.1
 --- !u!1 &639106163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1522,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1565936299}
         m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
         m_MethodName: LoadGameScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 639088964}
+        m_TargetAssemblyTypeName: GameData, Assembly-CSharp
+        m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2521,6 +2551,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1565936299}
         m_TargetAssemblyTypeName: ButtonScripts, Assembly-CSharp
         m_MethodName: LoadMenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 639088964}
+        m_TargetAssemblyTypeName: GameData, Assembly-CSharp
+        m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

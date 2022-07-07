@@ -18,23 +18,26 @@ public class AsteroidDestroy : MonoBehaviour
             if (listTags.Contains(colliderTag))
             {
                 tryCheck = true;
+                GameObject eventScripts = GameObject.Find("EventScripts");
                 switch (colliderTag)
                 {
                     case "Bullet":
                         if (this.tag == "Crystal")
                         {
-                            Money money = GameObject.Find("EventScripts").GetComponent<Money>();
+                            Money money = eventScripts.GetComponent<Money>();
                             money.countMoneyGame++;
                             money.UpdateMoney();
                         }
                         DestroyGO(thisGO);
                         break;
                     case "Starship":
-                        Health health = GameObject.Find("EventScripts").GetComponent<Health>();
+                        Health health = eventScripts.GetComponent<Health>();
+                        DamageEffect damageEffect = eventScripts.GetComponent<DamageEffect>();
                         if (health.countHealth > 0)
                         {
                             health.countHealth--;
                             health.UpdateHealth();
+                            damageEffect.TakeDamage();
                         }
                         DestroyGO(thisGO);
                         break;

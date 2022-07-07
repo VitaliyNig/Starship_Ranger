@@ -10,9 +10,9 @@ public static class DataManager
         PlayerPrefs.SetString(key, jsonDataString);
     }
 
-    public static T Load<T>(string key) where T: new()
+    public static T Load<T>(string key) where T : new()
     {
-        if(PlayerPrefs.HasKey(key))
+        if (PlayerPrefs.HasKey(key))
         {
             string loadedData = PlayerPrefs.GetString(key);
             return JsonUtility.FromJson<T>(loadedData);

@@ -9,10 +9,11 @@ public class MenuData : MonoBehaviour
     private Text bestScore;
     private const string playerKey = "playerData";
     private const string starshipKey = "starshipData";
+    private const string updateKey = "updateData";
 
     private void Start()
     {
-        if(PlayerPrefs.HasKey(playerKey))
+        if (PlayerPrefs.HasKey(playerKey) & PlayerPrefs.HasKey(starshipKey) & PlayerPrefs.HasKey(updateKey))
         {
             LoadData();
         }
@@ -28,6 +29,9 @@ public class MenuData : MonoBehaviour
         DataManager.Save(playerKey, playerData);
         var starshipData = DataManager.Load<StarshipData>(starshipKey);
         DataManager.Save(starshipKey, starshipData);
+        var updateData = DataManager.Load<UpgradeData>(updateKey);
+        DataManager.Save(updateKey, updateData);
+        Debug.Log("Set Default Data");
         SetData(playerData);
     }
 

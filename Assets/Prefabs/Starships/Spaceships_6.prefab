@@ -14482,6 +14482,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2ecac2dd05237aa49b44cc0126559d95, type: 2}
+  - {fileID: 2100000, guid: c8f0a13513044224ebbc9293f6ee32b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14653,6 +14654,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9082322190673653310, guid: 8dce054ebd3cbc64a8b77fcfa1f88b7b, type: 3}
   bulletSpeed: 30
   offsetPositionZ: 6.5
+  fireRate: 0
+  aimAssistance: 0
 --- !u!114 &-4049912614514585661
 MonoBehaviour:
   m_ObjectHideFlags: 0

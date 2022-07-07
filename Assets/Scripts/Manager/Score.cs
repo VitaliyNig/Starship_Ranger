@@ -14,6 +14,11 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
+        StartUpdateScore();
+    }
+
+    public void StartUpdateScore()
+    {
         InvokeRepeating("UpdateScore", rateUpdate, rateUpdate);
     }
 

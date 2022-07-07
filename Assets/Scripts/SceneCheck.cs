@@ -13,7 +13,6 @@ public class SceneCheck : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             this.GetComponent<СharacterController>().enabled = true;
-            this.GetComponent<СharacterAttack>().enabled = true;
             EngineStart();
             SetPosition();
         }

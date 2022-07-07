@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class СharacterSpawn : MonoBehaviour
 {
@@ -18,5 +19,10 @@ public class СharacterSpawn : MonoBehaviour
     {
         Destroy(starshipGO);
         starshipGO = Instantiate<GameObject>(starshipPrefab[starshipID]);
+        if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            this.GetComponent<GameData>().SetUpgradeData(starshipGO);
+            this.GetComponent<DamageEffect>().SetDamageParameter(starshipGO);
+        }
     }
 }
