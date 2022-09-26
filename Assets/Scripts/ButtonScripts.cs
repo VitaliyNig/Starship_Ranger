@@ -45,6 +45,18 @@ public class ButtonScripts : MonoBehaviour
         Debug.Log("Game closed");
     }
 
+    //ShopScene
+
+    public void BuyUpgradeItem()
+    {
+        GameObject.Find("EventScripts").GetComponentInChildren<ShopData>().BuyUpgrade(this.name);
+    }
+
+    public void BuyStarshipItem()
+    {
+        GameObject.Find("EventScripts").GetComponentInChildren<ShopData>().BuyStarship(this.name);
+    }
+
     //DevScene
 
     public void LoadDevScene()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameData : MonoBehaviour
 {
     private const string playerKey = "playerData";
-    private const string updateKey = "updateData";
+    private const string upgradeKey = "upgradeData";
     private int bestScore;
     private int starshipID;
 
@@ -32,7 +32,7 @@ public class GameData : MonoBehaviour
 
     public void SetUpgradeData(GameObject starshipGO)
     {
-        var upgradeData = DataManager.Load<UpgradeData>(updateKey);
+        var upgradeData = DataManager.Load<UpgradeData>(upgradeKey);
 
         Health health = this.GetComponent<Health>();
         health.countHealth = upgradeData.Health;

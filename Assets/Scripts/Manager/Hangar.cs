@@ -12,7 +12,9 @@ public class Hangar : MonoBehaviour
     [SerializeField]
     private Button rightButton;
     private int starshipID;
+    [SerializeField]
     private int sceneStarshipID;
+    [SerializeField]
     private List<int> unlockStarshipList;
     private СharacterSpawn characterSpawn;
     private Color colorBlue;
@@ -70,13 +72,14 @@ public class Hangar : MonoBehaviour
     public void ButtonLeft()
     {
         int countItemList = unlockStarshipList.Count;
-        if (sceneStarshipID == 0)
+        int indexSceneStarshipID = unlockStarshipList.IndexOf(sceneStarshipID);
+        if (indexSceneStarshipID == 0)
         {
-            sceneStarshipID = countItemList - 1;
+            sceneStarshipID = unlockStarshipList[countItemList - 1];
         }
         else
         {
-            sceneStarshipID = sceneStarshipID - 1;
+            sceneStarshipID = unlockStarshipList[indexSceneStarshipID - 1];
         }
         characterSpawn.starshipID = sceneStarshipID;
         characterSpawn.Reload();
@@ -86,13 +89,14 @@ public class Hangar : MonoBehaviour
     public void ButtonRight()
     {
         int countItemList = unlockStarshipList.Count;
-        if (sceneStarshipID == (countItemList - 1))
+        int indexSceneStarshipID = unlockStarshipList.IndexOf(sceneStarshipID);
+        if (indexSceneStarshipID == (countItemList - 1))
         {
-            sceneStarshipID = 0;
+            sceneStarshipID = unlockStarshipList[0];
         }
         else
         {
-            sceneStarshipID = sceneStarshipID + 1;
+            sceneStarshipID = unlockStarshipList[indexSceneStarshipID + 1];
         }
         characterSpawn.starshipID = sceneStarshipID;
         characterSpawn.Reload();
