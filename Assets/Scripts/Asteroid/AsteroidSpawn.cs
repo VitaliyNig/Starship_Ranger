@@ -7,10 +7,8 @@ public class AsteroidSpawn : MonoBehaviour
     [SerializeField]
     private AstreroidLists asteroidsPrefab = new AstreroidLists();
     private Vector3 screenSize;
-    [SerializeField]
-    private float spawnRate;
+    public float spawnRate;
     public static float asteroidSpeed = 10f;
-    private int asteroidCount = 1;
 
     [System.Serializable]
     public class AstreroidLists
@@ -33,10 +31,7 @@ public class AsteroidSpawn : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(spawnRate);
-        for (int i = 0; i < asteroidCount; i++)
-        {
-            AsteroidCreate();
-        }
+        AsteroidCreate();
         StartCoroutine(Timer());
     }
 

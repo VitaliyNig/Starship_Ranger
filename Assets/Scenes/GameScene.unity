@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 639088967}
   - component: {fileID: 639088969}
   - component: {fileID: 639088970}
+  - component: {fileID: 639088971}
   m_Layer: 0
   m_Name: EventScripts
   m_TagString: Untagged
@@ -912,6 +913,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blinkIntensity: 5
   blinkDuration: 0.1
+--- !u!114 &639088971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639088961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5027d7695abba3d49b4683e574d424b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyStep: 0.01
 --- !u!1 &639106163
 GameObject:
   m_ObjectHideFlags: 0

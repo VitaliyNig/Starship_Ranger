@@ -34,11 +34,6 @@ public class ButtonScripts : MonoBehaviour
 
     //DevScene
 
-    public void LoadDevScene()
-    {
-        SceneManager.LoadScene("DevScene");
-    }
-
     public void DeleteAllPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();

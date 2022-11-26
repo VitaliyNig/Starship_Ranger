@@ -11,9 +11,11 @@ public class Score : MonoBehaviour
     private float rateUpdate;
     public int countScore;
     public bool GameInPause = false;
+    private Difficulty difficulty;
 
     private void Start()
     {
+        difficulty = this.GetComponent<Difficulty>();
         StartUpdateScore();
     }
 
@@ -28,6 +30,7 @@ public class Score : MonoBehaviour
         {
             countScore++;
             scoreObject.text = countScore.ToString();
+            difficulty.DifficultyUpdate();
         }
         else
         {
