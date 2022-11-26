@@ -9,34 +9,9 @@ public class ButtonScripts : MonoBehaviour
     private const string starshipKey = "starshipData";
     private const string updateKey = "updateData";
 
-    public void LoadMenuScene()
+    public void LoadScene(int sceneNumber)
     {
-        SceneManager.LoadScene("MenuScene");
-    }
-
-    public void LoadGameScene()
-    {
-        SceneManager.LoadScene("GameScene");
-    }
-
-    public void LoadLeaderboardScene()
-    {
-        SceneManager.LoadScene("LeaderboardScene");
-    }
-
-    public void LoadHangarScene()
-    {
-        SceneManager.LoadScene("HangarScene");
-    }
-
-    public void LoadShopScene()
-    {
-        SceneManager.LoadScene("ShopScene");
-    }
-
-    public void LoadSettingsScene()
-    {
-        SceneManager.LoadScene("SettingsScene");
+        SceneManager.LoadScene(sceneNumber);
     }
 
     public void GameExit()
