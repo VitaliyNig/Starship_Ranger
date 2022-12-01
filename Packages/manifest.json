@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.lootlocker.lootlockersdk": "https://github.com/LootLocker/unity-sdk.git",
     "com.unity.cinemachine": "2.6.15",
     "com.unity.collab-proxy": "1.15.18",
     "com.unity.device-simulator": "3.0.3-preview",

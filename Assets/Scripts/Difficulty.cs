@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Difficulty : MonoBehaviour
@@ -9,17 +7,17 @@ public class Difficulty : MonoBehaviour
     private Score score;
     private AsteroidSpawn asteroidSpawn;
 
-    private void Start() 
+    private void Start()
     {
         score = this.GetComponent<Score>();
         asteroidSpawn = this.GetComponent<AsteroidSpawn>();
     }
-    
+
     public void DifficultyUpdate()
     {
-        if((score.countScore % 50) == 0)
+        if ((score.countScore % 50) == 0)
         {
-            if(asteroidSpawn.spawnRate > 0.1)
+            if (asteroidSpawn.spawnRate > 0.1)
             {
                 asteroidSpawn.spawnRate -= difficultyStep;
                 Debug.Log(asteroidSpawn.spawnRate);

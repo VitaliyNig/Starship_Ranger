@@ -1912,6 +1912,7 @@ GameObject:
   - component: {fileID: 1171863217}
   - component: {fileID: 1171863216}
   - component: {fileID: 1171863218}
+  - component: {fileID: 1171863219}
   m_Layer: 0
   m_Name: EventScripts
   m_TagString: Untagged
@@ -1967,6 +1968,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bestScore: {fileID: 254705135}
   audioMixer: {fileID: 24100000, guid: 517a65655ff5bff4db56c445452fe798, type: 2}
+--- !u!114 &1171863219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171863215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70d88957e9161448a204b024aca1459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1220325005
 GameObject:
   m_ObjectHideFlags: 0
