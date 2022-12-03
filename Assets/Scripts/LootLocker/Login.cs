@@ -4,25 +4,50 @@ using LootLocker.Requests;
 
 public class Login : MonoBehaviour
 {
-    private bool sessionStatus = true;
-    private const string key = "TempUsername";
     private const int numberScene = 7;
 
+    private void Awake()
+    {
+        GameObject[] audioObjects = GameObject.FindGameObjectsWithTag("LootLocker");
+        if (audioObjects.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+    
     private void Start()
+    {
+        GuestLogin();
+    }
+
+    private void GuestLogin()
     {
         LootLockerSDKManager.StartGuestSession((response) =>
         {
             if (!response.success)
             {
-                sessionStatus = false;
+                Debug.Log("ERROR: starting LootLocker session");
                 return;
             }
-            Debug.Log("Starting LootLocker session: " + sessionStatus);
+            PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
+            CheckUsername();
         });
+    }
 
-        if (!PlayerPrefs.HasKey(key))
+    private void CheckUsername()
+    {
+        LootLockerSDKManager.GetPlayerName((response) =>
         {
-            SceneManager.LoadScene(numberScene);
-        }
+            if (!response.success)
+            {
+                Debug.Log("ERROR: get LootLocker username");
+                return;
+            }
+            if (response.name == "")
+            {
+                SceneManager.LoadScene(numberScene);
+            }
+        });
     }
 }

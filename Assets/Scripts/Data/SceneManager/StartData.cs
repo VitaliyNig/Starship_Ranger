@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using LootLocker.Requests;
+using UnityEngine.SceneManagement;
 
 public class StartData : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class StartData : MonoBehaviour
     private InputField inputField;
     private Color colorBlue;
     private Color colorBlack;
+    private const int numberScene = 0;
 
     private void Start()
     {
@@ -33,10 +36,23 @@ public class StartData : MonoBehaviour
 
     public void CheckInput()
     {
-        if (inputField.text == "")
+        if (inputField.text == "" || inputField.text.Length > 20)
         {
             buttonConfirm.interactable = false;
             textConfirm.color = colorBlue;
         }
+    }
+
+    public void SetUsername()
+    {
+        LootLockerSDKManager.SetPlayerName(inputField.text, (response) =>
+        {
+            if (!response.success)
+            {
+                Debug.Log("ERROR: set LootLocker username");
+                return;
+            }
+            SceneManager.LoadScene(numberScene);
+        });
     }
 }

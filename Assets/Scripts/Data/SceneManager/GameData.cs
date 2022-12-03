@@ -1,4 +1,5 @@
 using UnityEngine;
+using LootLocker.Requests;
 
 public class GameData : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class GameData : MonoBehaviour
     private const string upgradeKey = "upgradeData";
     private int bestScore;
     private int starshipID;
+    private const int leaderboardID = 9284;
 
     private void Start()
     {
@@ -43,6 +45,7 @@ public class GameData : MonoBehaviour
     public void SaveData()
     {
         DataManager.Save(playerKey, GetSaveData());
+        SubmitScore();
     }
 
     private PlayerData GetSaveData()
@@ -56,5 +59,16 @@ public class GameData : MonoBehaviour
             StarshipID = starshipID
         };
         return data;
+    }
+
+    public void SubmitScore()
+    {
+        LootLockerSDKManager.SubmitScore(PlayerPrefs.GetString("PlayerID"), this.GetComponentInChildren<Score>().countScore, leaderboardID, (response) =>
+        {
+            if (response.statusCode != 200)
+            {
+                Debug.Log("ERROR: submit score");
+            }
+        });
     }
 }
