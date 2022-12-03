@@ -45,7 +45,7 @@ public class StartData : MonoBehaviour
 
     public void SetUsername()
     {
-        LootLockerSDKManager.SetPlayerName(inputField.text, (response) =>
+        LootLockerSDKManager.SetPlayerName(inputField.text.Trim(), (response) =>
         {
             if (!response.success)
             {
